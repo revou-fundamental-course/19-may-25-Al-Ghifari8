@@ -1,0 +1,301 @@
+/* Global Styles and Body Setup */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    box-sizing: border-box;
+}
+/* Site Header Styling */
+.site-header {
+    width: 100%;
+    padding: 0;
+    background-color: #ffffff;
+    text-align: center;
+    font-size: 0.9em;
+    color: #555;
+    border-bottom: 1px solid #e0e0e0;
+}
+/* Main Content Container Styling */
+main.container {
+    background-color: #ffffff;
+    padding: 20px 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    width: 100%;
+    max-width: 550px;
+    margin: 20px;
+    box-sizing: border-box;
+}
+
+main.container h1 {
+    font-size: 1.6rem;
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+/* Dynamic Instruction Paragraph Styling */
+#dynamic-instruction {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 25px;
+}
+/* Converter Tool Section Styling */
+.converter-tool {
+    margin-bottom: 20px;
+}
+
+.converter-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Adds space between input groups */
+    margin-bottom: 25px;
+}
+/* Input Group (Label + Input) Styling */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #34495e;
+    font-size: 1rem;
+}
+
+input[type="number"] {
+    padding: 12px 15px;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
+    width: 80%;
+    max-width: 280px;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #2c3e50;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+/* Number Input Field Styling */
+input[type="number"]:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.25);
+    outline: none;
+}
+
+input[type="number"]::placeholder {
+    color: #95a5a6;
+    font-size: 0.95rem;
+}
+/* Button Group Styling */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    min-width: 100px;
+}
+
+.buttons button:hover {
+    opacity: 0.85;
+}
+
+.buttons button:active {
+    transform: scale(0.97);
+}
+
+.buttons button.convert {
+    background-color: #27ae60;
+    color: white;
+}
+
+.buttons button.reverse {
+    background-color: #3498db;
+    color: white;
+}
+
+.buttons button.reset {
+    background-color: #e74c3c;
+    color: white;
+}
+/* Explanation Section Styling */
+.explanation {
+    margin-top: 30px;
+    text-align: left;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.explanation h3 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    color: #2c3e50;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.explanation p,
+.explanation li {
+    line-height: 1.7;
+    color: #34495e;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+.explanation .formula {
+    font-weight: bold;
+    text-align: center;
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    color: #2c3e50;
+    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.explanation ul {
+    list-style-position: inside;
+    padding-left: 0;
+    margin-top: 10px;
+}
+/* Footer Styling */
+.site-footer {
+    width: 100%;
+    background-color: #ecf0f1;
+    color: #7f8c8d;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: auto;
+    font-size: 0.9rem;
+    border-top: 1px solid #dcdcdc;
+}
+/* Visually Hidden Class for Accessibility */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+/* Styles for the ultra-simplified color palette legend */
+.legend-items-container.simple-palette {
+    display: flex; /* Arrange swatches in a row */
+    flex-wrap: wrap; /* Allow swatches to wrap to the next line */
+    justify-content: center; /* Center the row of swatches */
+    gap: 0px; /* Small gap between swatches */
+    padding: 0px 0; /* Some padding around the swatches */
+}
+
+.simple-palette .legend-color-swatch {
+    width: 25px; /* Adjust size as needed */
+    height: 25px; /* Adjust size as needed */
+    border: 0px solid #ccc;
+    border-radius: 0px;
+    margin: 0; /* Remove margin if direct children of flex container */
+}
+
+/* Keep existing .temperature-legend and .temperature-legend h3 styles */
+.temperature-legend {
+    margin-top: 5px;
+    padding: 5px;
+    background-color: #ffffff;
+    border-radius: 0px;
+    border: 0px solid #e2e8f0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.temperature-legend h3 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 15px; /* Adjusted margin */
+    font-size: 1.4rem;
+    color: #2d3748;
+}
+
+/* Site Footer Styling */
+.site-footer {
+    width: 100%; /* Footer spans full width */
+    background-color: #e2e8f0; /* Background color for footer */
+    color: #718096; /* Softer text color for footer */
+    text-align: center; /* Centers text in footer */
+    padding: 0; /* Padding inside the footer */
+    margin-top: auto; /* Pushes footer to the bottom if main content is short */
+    font-size: 0.9rem; /* Font size for footer text */
+    border-top: 1px solid #cbd5e0; /* Light border at the top of footer */
+}
+
+.site-footer p {
+    margin: 0; /* Removes default margin from paragraph in footer */
+}
+/* Responsive Design for Smaller Screens */
+@media (max-width: 600px) {
+    main.container {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    main.container h1 {
+        font-size: 1.4rem;
+    }
+    #dynamic-instruction {
+        font-size: 0.9rem;
+    }
+
+    input[type="number"] {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .buttons button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .buttons button:last-child {
+        margin-bottom: 0;
+    }
+
+    .explanation h3 {
+        font-size: 1.2rem;
+    }
+
+    .explanation p, .explanation li, .explanation .formula {
+        font-size: 0.9rem;
+    }
+}

@@ -1,30 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
+<!--Header-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cek Konversi Suhu</title>
-    <link rel="stylesheet" href="css/style.css">
-    
+    <title>Konverter Suhu</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+<!--Body-->
 <body>
-    <!-- Header -->
-    <header>
-        <h1>Cek Konversi Suhu</h1>
+    <header class="site-header">
+        <p><strong>Konverter Suhu Sederhana</strong></p>
     </header>
-
     <!-- Main Content -->
-     <main>
-    <!-- Form Input -->
-        <section>
-            <p>Masukan Suhu Dalam Celcius (&deg;C) di Bawah</p>
+    <main class="container">
+        <h1>Masukkan nilai suhu untuk dikonversi</h1>
+        <p id="dynamic-instruction">Masukkan suhu derajat Celsius (°C) ke kotak di bawah, lalu klik tombol Konversi untuk mendapatkan hasil konversi dalam bentuk Fahrenheit (°F).</p>
+        <section class="converter-tool" aria-labelledby="converter-tool-heading">
+            <h2 id="converter-tool-heading" class="visually-hidden">Formulir Konversi Suhu</h2>
+            <div class="converter-wrapper">
+                <div class="input-group" id="input-group1">
+                    <label for="input1" id="label1">Celsius (°C)</label>
+                    <input type="number" id="input1" placeholder="Masukkan suhu">
+                </div>
+                <div class="input-group" id="input-group2">
+                    <label for="input2" id="label2">Fahrenheit (°F)</label>
+                    <input type="number" id="input2" placeholder="Hasil konversi" readonly aria-live="polite">
+                </div>
+            </div>
+            <div class="buttons">
+                <button type="button" class="convert" id="convertBtn">Konversi</button>
+                <button type="button" class="reverse" id="reverseBtn">Reverse</button>
+                <button type="button" class="reset" id="resetBtn">Reset</button>
+            </div>
         </section>
-        <form id="form" action="javascript:void(0);">
-            <label for="suhu">Suhu (&deg;C):</label>
-            <input type="number" id="suhu" name="suhu" required>
-            <button type="submit">Konversi</button>
-        
-     </main>
-     <script src="js/javascript.js" defer></script>
+        <!-- Explanation Section -->
+        <section class="explanation" aria-labelledby="explanation-heading">
+            <h2 id="explanation-heading" class="visually-hidden">Informasi Cara Konversi Suhu</h2>
+            <article id="celsius-to-fahrenheit-explanation">
+                <h3>Cara Konversi Dari Celsius (°C) ke Fahrenheit (°F)</h3>
+                <p>Untuk mengkonversi suhu dari Celsius (°C) ke Fahrenheit (°F), gunakan rumus berikut:</p>
+                <p class="formula">S°F = (S°C × 9/5) + 32</p>
+                <p id="cToFExplanationResult"></p>
+            </article>
+
+            <article id="fahrenheit-to-celsius-explanation" style="display:none;">
+                <h3>Cara Konversi Dari Fahrenheit (°F) ke Celsius (°C)</h3>
+                <p>Untuk mengkonversi suhu dari Fahrenheit (°F) ke Celsius (°C), gunakan rumus berikut:</p>
+                <p class="formula">S°C = (S°F - 32) × 5/9</p>
+                <p id="fToCExplanationResult"></p>
+            </article>
+        </section>
+    <!-- Temperature Legend Section -->
+    <section class="temperature-legend" aria-labelledby="legend-title">
+            <h3 id="legend-title">Legenda Warna Suhu</h3>
+            <h4>Dingin <---------------------------------------------> Panas</h4>
+            <div class="legend-items-container simple-palette">
+                <span class="legend-color-swatch" style="background-color: #A0D2DB;"><sup></sup></span>
+                <span class="legend-color-swatch" style="background-color: #89CFF0;"></span>
+                <span class="legend-color-swatch" style="background-color: #BDE0FE;"></span>
+                <span class="legend-color-swatch" style="background-color: #AFEEEE;"></span>
+                <span class="legend-color-swatch" style="background-color: #98FB98;"></span>
+                <span class="legend-color-swatch" style="background-color: #E0E7AF;"></span>
+                <span class="legend-color-swatch" style="background-color: #FAFAD2;"></span>
+                <span class="legend-color-swatch" style="background-color: #FFFFE0;"></span>
+                <span class="legend-color-swatch" style="background-color: #FFFACD;"></span>
+                <span class="legend-color-swatch" style="background-color: #FFD700;"></span>
+                <span class="legend-color-swatch" style="background-color: #FFA500;"></span>
+                <span class="legend-color-swatch" style="background-color: #FF8C00;"></span>
+                <span class="legend-color-swatch" style="background-color: #FF6347;"></span>
+                <span class="legend-color-swatch" style="background-color: #FF4500;"></span>
+                <span class="legend-color-swatch" style="background-color: #E0115F;"></span>
+                <span class="legend-color-swatch" style="background-color: #B81149;"></span>
+                <span class="legend-color-swatch" style="background-color: #8B0000;"></span>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>&copy; <span id="current-year"></span> Konverter Suhu Sederhana Bayu Fahmi. Hak Cipta TIDAK Dilindungi.</p>
+    </footer>
+    <script src="js/javascript.js"></script>
 </body>
 </html>
