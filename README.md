@@ -1,8 +1,8 @@
-                                                 Konverter Suhu Sederhana
+## Konverter Suhu Sederhana
 
 Konverter Suhu Sederhana adalah aplikasi web yang ramah pengguna yang dirancang untuk mengkonversi nilai suhu antara Celsius (°C) dan Fahrenheit (°F).
 
-## Fitur Utama
+Fitur Utama
 1. Konversi Suhu Dua Arah. Dari Celsius ke Fahrenheit dan Sebaliknya
    
 2. Antarmuka Pengguna Intuitif
